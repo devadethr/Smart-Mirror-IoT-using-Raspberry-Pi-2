@@ -1,0 +1,6 @@
+{
+  "name": "SmartMirror",
+  "description": "SmartMirror - Lightweight smart mirror display and local phone controller for Raspberry Pi 2 Model B running Raspberry Pi OS 32-bit, featuring real-time Google Maps traffic and routes, conversational Gemini voice agent, and SQLite persistence.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

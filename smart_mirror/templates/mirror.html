@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Mirror Display</title>
+  <link rel="stylesheet" href="/static/css/mirror.css">
+</head>
+<body>
+  <!-- Night Dimming Optical Filter -->
+  <div id="dimming-overlay" class="dimming-overlay" aria-hidden="true"></div>
+
+  <!-- Main 16:9 Mirror Grid -->
+  <main class="mirror-viewport">
+    
+    <!-- Top Left: Digital Clock & Full Date -->
+    <section class="region-top-left" aria-label="Clock and Date">
+      <div class="clock-widget">
+        <div class="clock-time">
+          <span id="clock-hours-mins">--:--</span>
+          <span id="clock-seconds" class="clock-seconds">:--</span>
+          <span id="clock-ampm" class="clock-ampm">--</span>
+        </div>
+        <div id="clock-date" class="clock-date">Loading date...</div>
+      </div>
+    </section>
+
+    <!-- Top Right: Live Weather & Forecast -->
+    <section class="region-top-right" aria-label="Weather Forecast">
+      <div id="weather-container" class="weather-widget">
+        <div class="unavailable-badge">Loading weather...</div>
+      </div>
+    </section>
+
+    <!-- Center Reflection Zone (Kept minimal and uncluttered) -->
+    <section class="region-center" aria-label="Greeting">
+      <div id="center-greeting" class="center-greeting"></div>
+    </section>
+
+    <!-- Bottom Left: Calendar Schedule & Reminders -->
+    <section class="region-bottom-left" aria-label="Upcoming Events and Reminders">
+      <div class="widget-title">Schedule &amp; Reminders</div>
+      <div id="schedule-container" class="list-container">
+        <div class="unavailable-badge">Loading schedule...</div>
+      </div>
+    </section>
+
+    <!-- Bottom Right: To-Do List -->
+    <section class="region-bottom-right" aria-label="Tasks">
+      <div class="widget-title">Tasks</div>
+      <div id="todo-container" class="list-container">
+        <div class="unavailable-badge">Loading tasks...</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Ticker: Bullet-separated news headlines -->
+  <footer class="ticker-bar" aria-label="News Headlines Ticker">
+    <div class="ticker-label">News</div>
+    <div class="ticker-wrapper" style="overflow: hidden; width: 100%;">
+      <div id="ticker-content" class="ticker-content">
+        <span class="ticker-item">LuminaMirror starting up • Connecting local services</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/mirror.js"></script>
+</body>
+</html>
